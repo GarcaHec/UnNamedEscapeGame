@@ -1,0 +1,100 @@
+<MultiAction>
+	<ID>TryDoor</ID>
+	<Condition>
+		<Type>ItemRequiered</Type>
+		<Arguments>Key</Arguments>
+		<Outputs>2</Outputs>
+	</Condition>
+	<Output>
+		<Action>
+			<Type>ShowText</Type>
+			<Arguments>UnlockedDoor</Arguments>
+		</Action>
+		<Action>
+			<Type>RemoveItem</Type>
+			<Arguments>Key</Arguments>
+		</Action>
+	</Output>
+	<Output>
+		<Action>
+			<Type>ShowText</Type>
+			<Arguments>LockedDoor</Arguments>
+		</Action>
+	</Output>
+</MultiAction>
+
+<MultiAction>
+	<ID>TryLocker</ID>
+	<Condition>
+		<Type>None</Type>
+		<Outputs>1</Outputs>
+	</Condition>
+	<Output>
+		<Action>
+			<Type>ShowText</Type>
+			<Arguments>LockerWindowNotDone</Arguments>
+		</Action>
+	</Output>
+</MultiAction>
+
+<SingleAction>
+	<ID>OpenDoor</ID>
+	<Type>ShowText</Type>
+	<Arguments>OpenDoor</Arguments>
+</SingleAction>
+
+<SingleAction>
+	<ID>MagicSymbol</ID>
+	<Type>ShowText</Type>
+	<Arguments>MagicSymbol</Arguments>
+</SingleAction>
+
+<SingleAction>
+	<ID>Teleporter</ID>
+	<Type>ShowText</Type>
+	<Arguments>Teleporter</Arguments>
+</SingleAction>
+
+<SingleAction>
+	<ID>BrickWall</ID>
+	<Type>ShowText</Type>
+	<Arguments>BrickWall</Arguments>
+</SingleAction>
+
+<SingleAction>
+	<ID>Rock</ID>
+	<Type>ShowText</Type>
+	<Arguments>Rock</Arguments>
+</SingleAction>
+
+<SingleAction>
+	<ID>Bucket</ID>
+	<Type>ShowText</Type>
+	<Arguments>Bucket</Arguments>
+</SingleAction>
+
+<SingleAction>
+	<ID>Torch</ID>
+	<Type>ShowText</Type>
+	<Arguments>Torch</Arguments>
+</SingleAction>
+
+<MultiAction>
+	<ID>GetKey</ID>
+	<Condition>
+		<Type>None</Type>
+		<Outputs>1</Outputs>
+	</Condition>
+	<Output>
+		<Action>
+			<Type>ShowText</Type>
+			<Arguments>KeyFound</Arguments>
+		</Action>
+		<Action>
+			<Type>FindItem</Type>
+			<Arguments>Key</Arguments>
+		</Action>
+	</Output>
+</MultiAction>
+
+

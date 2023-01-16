@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI.png" type="Texture" id=1]
+[ext_resource path="res://Components/Inventory/Inventory.gd" type="Script" id=2]
+[ext_resource path="res://Components/Inventory/Inventory.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 70, 10, 46, 12 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 206, 10, 86, 982 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 10, 10, 169, 982 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 307, 10, 84, 982 )
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1920.0
+margin_bottom = -1080.0
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+offset = Vector2( 20, 70 )
+hideDirection = 1
+
+[node name="MainButton" type="TextureRect" parent="."]
+margin_right = 46.0
+margin_bottom = 12.0
+rect_scale = Vector2( 4, 4 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Anchor" type="Control" parent="."]
+margin_left = 20.0
+margin_top = 70.0
+margin_right = 60.0
+margin_bottom = 110.0
+
+[node name="PanelsContainer" type="HBoxContainer" parent="Anchor"]
+margin_right = 417.0
+margin_bottom = 982.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="TextureRect" parent="Anchor/PanelsContainer"]
+margin_right = 86.0
+margin_bottom = 982.0
+size_flags_horizontal = 9
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fill" type="TextureRect" parent="Anchor/PanelsContainer"]
+visible = false
+margin_left = 86.0
+margin_right = 255.0
+margin_bottom = 982.0
+size_flags_horizontal = 9
+texture = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="TextureRect" parent="Anchor/PanelsContainer"]
+margin_left = 86.0
+margin_right = 170.0
+margin_bottom = 982.0
+size_flags_horizontal = 9
+texture = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsContainer" type="GridContainer" parent="Anchor"]
+margin_left = 17.0
+margin_top = 35.0
+margin_right = 57.0
+margin_bottom = 75.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animator" type="Tween" parent="."]
+[connection signal="gui_input" from="MainButton" to="." method="panelClicked"]

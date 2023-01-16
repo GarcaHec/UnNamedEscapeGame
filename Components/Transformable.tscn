@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Components/Transformable.gd" type="Script" id=1]
+
+[sub_resource type="ImageTexture" id=1]
+size = Vector2( 50, 50 )
+
+[node name="Transformable" type="TextureRect"]
+margin_left = 312.46
+margin_top = 161.27
+margin_right = 362.46
+margin_bottom = 211.27
+texture = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+mode = "Rotate"
+[connection signal="gui_input" from="." to="." method="clicked"]

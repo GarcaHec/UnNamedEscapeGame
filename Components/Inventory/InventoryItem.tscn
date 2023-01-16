@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Components/Inventory/InventoryItem.gd" type="Script" id=1]
+[ext_resource path="res://Components/Inventory/Inventory.png" type="Texture" id=2]
+[ext_resource path="res://Art/Digital/Utils/Items_Atlas.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+resource_local_to_scene = true
+atlas = ExtResource( 2 )
+region = Rect2( 480, 480, 140, 140 )
+
+[sub_resource type="AtlasTexture" id=2]
+resource_local_to_scene = true
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 180, 180 )
+
+[node name="Frame" type="TextureRect"]
+margin_right = 140.0
+margin_bottom = 140.0
+mouse_filter = 2
+texture = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+animationTime = 0.3
+
+[node name="ItemSprite" type="TextureRect" parent="."]
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 160.0
+margin_bottom = 160.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 90, 90 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animator" type="Tween" parent="."]
+[connection signal="gui_input" from="." to="." method="clicked"]
+[connection signal="mouse_entered" from="." to="." method="hovered"]
+[connection signal="mouse_exited" from="." to="." method="unhovered"]

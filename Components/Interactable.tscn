@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Components/Interactable.gd" type="Script" id=1]
+
+[node name="Interactable" type="Control"]
+margin_right = 20.0
+margin_bottom = 20.0
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+border_color = Color( 0.0431373, 0.909804, 1, 1 )
+[connection signal="gui_input" from="." to="." method="clicked"]
+[connection signal="resized" from="." to="." method="resizeRef"]

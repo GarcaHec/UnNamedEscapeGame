@@ -1,0 +1,55 @@
+<Text>
+	<ID>LockedDoor</ID>
+	<Content>A wooden door. It is locked.</Content>
+</Text>
+
+<Text>
+	<ID>UnlockedDoor</ID>
+	<Content>You opened the door using the key. Unfortunately the key broke.</Content>
+</Text>
+
+<Text>
+	<ID>OpenDoor</ID>
+	<Content>You tried to cross to the next room. However, the developer has not yet created the next room so you stare to the blackness of procrastination. You are stuck here for now. GAMEOVER</Content>
+</Text>
+
+<Text>
+	<ID>LockerWindowNotDone</ID>
+	<Content>You see a dial locker beside you. But you are unable to turn the dial, it seems the developer as usual have been sleeping, eating... Basically he is so lazy that you will not know what is inside the locker at this moment.</Content>
+</Text>
+ 
+<Text>
+	<ID>KeyFound</ID>
+	<Content>You found a key.</Content>
+</Text>
+
+<Text>
+	<ID>MagicSymbol</ID>
+	<Content>There is a weird symbol carved in the floor of this room.</Content>
+</Text>
+
+<Text>
+	<ID>Rock</ID>
+	<Content>This rock is so smooth. How is it possible?</Content>
+</Text>
+
+<Text>
+	<ID>Bucket</ID>
+	<Content>You don't want to know what is spilling from that bucket.</Content>
+</Text>
+
+<Text>
+	<ID>Torch</ID>
+	<Content>This torch lights the room. The fire does not seem to dim.</Content>
+</Text>
+
+<Text>
+	<ID>BrickWall</ID>
+	<Content>One of the bricks is missing. You have the weird sensation that something used to be in the hole. Maybe if this wasn't a preprepreprealpha version...</Content>
+</Text>
+
+
+<Text>
+	<ID>Teleporter</ID>
+	<Content>There is what looks like to be a portal oozing darkness into the room. You feel the need to touch it but when you think about it your body does not respod to your wishes.</Content>
+</Text>
